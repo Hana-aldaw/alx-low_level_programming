@@ -3,6 +3,7 @@
 /**
  * _isalpha - checks for alphabetic char
  * @c: char to be checked
+ *
  * Return: 1 if char is a letter,othrwise 0
  */
 
