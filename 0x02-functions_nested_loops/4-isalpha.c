@@ -2,9 +2,8 @@
 
 /**
  * _isalpha - checks for alphabetic char
- * @c: char is going to check
- *
- * Return: 1 if char is letter lowr or upper, otherwise 0
+ * @c: char to be checked
+ * Return: 1 if char is a letter,othrwise 0
  */
 
 int _isalpha(int c)
