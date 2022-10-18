@@ -1,8 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+/* more headers goes there */
+
 /**
  * main - Determain if a random number is positive,negative pr zero.
+ *
  * Return: 0 on success
 */
 int main(void)
@@ -11,6 +14,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+	/* your code goes here */
 
 if (n < 0)
 {
