@@ -5,7 +5,7 @@
  * @x: string param
  * Return: capitalizes string
  */
-char *cap_string(char *x)
+char *cap_string(char *)
 {
 	char spc[] = {32, 9, '\n', ',', ';', '.', '?', '!', '"', '{', '}', '(', ')'};
 	int len = 13;
