@@ -6,7 +6,7 @@
  * @ a: string param
  * Return: string
  */
-char *string_toupper(char *)
+char *string_toupper(char *a)
 {
 	int i = 0;
 
