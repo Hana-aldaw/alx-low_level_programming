@@ -3,10 +3,10 @@
 /**
  * string_toupper - changes lowercase letters to uppercase
  *
- * @a: string param
+ * @ a: string param
  * Return: string
  */
-char *string_toupper(char *a)
+char *string_toupper(char *)
 {
 	int i = 0;
 
