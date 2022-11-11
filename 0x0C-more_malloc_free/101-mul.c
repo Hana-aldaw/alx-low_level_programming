@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-int find_len(char *str);
-
 /**
  * main - main function
  *
