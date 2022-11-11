@@ -4,18 +4,22 @@
 int find_len(char *str);
 
 /**
- * find_len - find the lenght of string
- * @str: string
+ * main - main function
  *
- * Return: the length
+ * @argc: quantity
+ * @argv: value
+ *
+ * Return: 0
  */
 
-int find_len(char *str)
+int main(int argc, char **argv)
 {
-	int len = 0;
-
-	while (*str++)
-		len++;
-	return (len);
+	if (argc - 1 != 2)
+	{
+		printf("error\n");
+		exit(98);
+	}
+	printf("%d\n", atoi(argv[1] * atoi(argv[2]));
+	return (0);
 }
 
