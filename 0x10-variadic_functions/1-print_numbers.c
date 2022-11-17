@@ -24,12 +24,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			str = (nil)";
 
 		if (!separator)
-			printf(" % s", str);
+			printf("%s", str);
 
 		else if (separator && i == 0)
-			printf(" % s", str);
+			printf("%s", str);
 		else
-			printf(" % s % s", separator, str);
+			printf("%s%s", separator, str);
 	}
 	printf("\n");
 
