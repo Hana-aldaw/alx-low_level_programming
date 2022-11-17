@@ -1,4 +1,4 @@
-#include "variadic_functions"
+#include "variadic_functions.h"
 
 /**
  * print_all - function that prints anything
