@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - prints all the numbers of base 16 in lowercase
  *
@@ -6,23 +7,20 @@
  */
 int main(void)
 {
-	char c;
-	int d;
-	
-	c = 'a';
-	d = 0;
-	while 
-		(d < 10)
-		 {
-		  Putchar(d + '0');
-		  d++;
-		 }
-	while
-		(c <= 'f')
-		{
-			putchar(c);
-			c++;
-		}
-		putchar('\n');
-		rerurn (0);
+	int num = '0';
+	char letter = 'a';
+
+	while (num <= '9')/*print 0-9*/
+	{
+		putchar(num);
+		num++;
+	}
+	while (letter <= 'f')/*print a to f*/
+	{
+		putchar(letter);
+		letter++;
+	}
+	putchar('\n');
+
+	return (0);
 }
