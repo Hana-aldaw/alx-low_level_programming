@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 
 /**
@@ -9,15 +7,11 @@
 */
 int main(void)
 {
-	int intType;
-	float floatType;
-	double doubleType;
-	char charType;
-
-	printf("size of a int: %zu byte(s)\n", sizeof(intType));
-	printf("size of a float: %zu byte(s)\n", sizeof(floatType));
-	printf("size of a double: %zu byte(s)\n", sizeof(doubleType));
-	printf("size of a char: %zu byte(s)\n", sizeof(charType));
+	printf("size of a int: %zu byte(s)\n", sizeof(int));
+	printf("size of a char: %zu byte(s)\n", sizeof(char));
+	printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
+	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
+	printf("Size of a float: %zu byte(s)\n", sizeof(float));
 
 	return (0);
 }
