@@ -5,12 +5,14 @@
  *
  * @s: source string
  * @accept: accepted string
+ *
  * Return: number of bytes in the initial segment
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int a = 0, b, x = 0;
+
 	while (accept[a])
 	{
 		b = 0;
