@@ -6,6 +6,7 @@
  *
  * @dest: first param
  * @src: second param
+ *
  * Return: string
  */
 
@@ -13,6 +14,7 @@ char *_strcat(char *dest, char *src)
 
 {
 	int len = 1, i;
+
 	while (dest[len])
 		len++;
 
