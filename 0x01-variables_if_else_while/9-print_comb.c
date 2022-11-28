@@ -8,18 +8,17 @@
  */
 int main(void)
 {
+	int i;
 
-	int c = 0;
-
-	while (c < 10)
+	for (i = 0; i < 10; i++)
 	{
-		putchar(48 + c)
-		if (c != 9)
+		putchar(i + '0');
+
+		if (i < 9)
 		{
-		putchar(',');
-		putchar(' ');
+			putchar(',');
+			putchar(32);
 		}
-		c++;
 	}
 	putchar('\n');
 	return (0);
