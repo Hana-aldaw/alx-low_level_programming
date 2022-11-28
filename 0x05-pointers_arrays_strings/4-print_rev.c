@@ -2,12 +2,14 @@
 
 /**
  * print_rev - function that prints a string, in revers
+ *
  *@s: string
  */
 
 void print_rev(char *s)
 {
 	int i, n;
+
 	n = 0;
 
 	while (s[n] != '\0')
