@@ -42,6 +42,6 @@ int main(void)
 			printf(", ");
 		count++;
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
