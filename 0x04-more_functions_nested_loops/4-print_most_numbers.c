@@ -8,15 +8,12 @@ i#include "main.h"
 
 void print_most_numbers(void)
 {
-	int x;
+	char c;
 
-	for (x = '0' ; x < '9' ; x++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		if (x == '2' || x == '4')
-		{
-			continue;
-		}
-			_putchar(x);
+		if (!(c == '2' || c == '4')
+			_putchar(c);
 	}
 	_putchar('\n');
 }
