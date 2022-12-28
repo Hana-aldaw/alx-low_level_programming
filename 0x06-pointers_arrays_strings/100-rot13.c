@@ -4,23 +4,26 @@
  * rot13 - encodes a string using rot13
  *
  * @s: input string
- * Return: thepointer of the dest
+ * Return: the pointer of the dest
  */
 
 char *rot13(char *s)
 {
-	int i, j;
-	char *x = "abcdefghijklmnoprstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char *y = "stuvwxyzabcdefghijklmnoprSTUVWXYZABCDEFGHIJKLMNOPQR";
+	int a = 0, i;
+	char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*(s + a) != '\0')
 	{
-		for (j = 0; x[j] != '\0'; j++)
+		for (i = 0; i < 52; i++)
 		{
-			if (s[i] == x[i])
-				s[i] = y[j];
-			break;
+			if (*(s + a) == letters[i])
+			{
+				*(s + a) = rot13[i];
+				break;
+			}
 		}
+		a++:
 	}
 	return (s);
 }
