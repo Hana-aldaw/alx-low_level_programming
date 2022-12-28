@@ -1,52 +1,52 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * strtow - splits a string into words
- *
  * @str: string
  *
  * Return: pointer
  */
 char **strtow(char *str)
 {
-	char **aout;
-	unsigned int c, height, i, j, a1;
+	int i, j, k = 0, l, m, count = 0, len;
+	char **words;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	for (c = height = 0; str[c] != '\0'; c++)
-
-		if (str[c] != '' &&(str[c + 1] == '' || str[c + 1] == '\0'))
-				height++;
-				aout = malloc((height + 1) * sizeof(char *));
-
-				if (aout == NULL || height == 0)
-				free(aout);
-				rerurn (NULL);
-
-				for (i = a1 = 0; i < height; i++)
-				{
-				for (c = a1; str[c] != '\0'; c++)
-				{
-				if (str[c] == '')
-				a1++;
-
-				if (str[c] != '' &&(str[c + 1] == '' || str[c + 1] == '\0'))
-				{
-					aout[i] = malloc((c - a1 + 2) * sizeof(char));
-					if (aout[i] == NULL)
-					{
-						ch_free_grid(aout, i);
-						return (NULL);
-					}
-					break;
-				}
-				}
-				for (j = 0; a1 <= c; a1++, j++)
-					aout[i][j] = str[a1];
-				aout[i][j] = '\0'
-				}
-				aout[i] = NULL;
-				return (aout);
+	for (i = 0; str[i] != '\0'; i++)
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+			count++;
+	if (count == 0)
+		return (NULL);
+	words = malloc((count + 1) * sizeof(char *));
+	if (words == NULL)
+	{
+		free(words);
+		return (NULL);
+	}
+	for (i = 0; str[i] != '\0' &&  k < count; i++)
+	{
+		if (str[i] != ' ')
+		{
+			len = 0;
+			for (j = i; str[j] != ' ' && str[j] != '\0'; j++)
+				len++;
+			words[k] = malloc((len + 1) * sizeof(char));
+			if (words[k] == NULL)
+			{
+				for (m = 0; m < k; m++)
+					free(words[k]);
+				free(words);
+				return (NULL);
+			}
+			for (l = 0; l < len; l++, i++)
+				words[k][l] = str[i];
+			words[k][l] = '\0', k++;
+		}
+	}
+	words[k] = NULL;
+	return (words);
 }
