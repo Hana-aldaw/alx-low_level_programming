@@ -3,18 +3,21 @@
 /**
  * string_toupper - changes lowercase letters to uppercase
  *
- * @s: string param
+ * @p: string param
  * Return: string
  */
-char *string_toupper(char *s)
+char *string_toupper(char *p)
 {
-	int i = 0;
+	int a = 0;
 
-	    while (s[i])
-	    {
-		    if (s[i] >= 97 && s[i] <= 122)
-			    s[i] = s[i] - 32;
-		    i++;
-	    }
-	    return (s);
+	while (p[a])
+	{
+		if (p[a] >= 97 && p[a] <= 122)
+		{
+			p[a] -= 32;
+		}
+		
+		a++;
+	}
+	return (p);
 }
