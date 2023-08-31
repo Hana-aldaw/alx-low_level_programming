@@ -5,7 +5,7 @@
  * need to flip to get from one number to another
  *
  * @n: number 1
- * @n: number 2
+ * @m: number 2
  *
  * Return: number of bits
  */
