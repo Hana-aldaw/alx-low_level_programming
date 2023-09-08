@@ -75,13 +75,13 @@ void print_class(unsigned char *e_ident)
 		case ELFCLASSNONE:
 			printf("none\n");
 			break;
-			case ELFCLASS32:
+		case ELFCLASS32:
 			printf("ELF32\n");
 			break;
-			case ELFCLASS64:
+		case ELFCLASS64:
 			printf("ELF64\n");
 			break;
-			default:
+		default:
 			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
@@ -99,13 +99,13 @@ void print_data(unsigned char *e_ident)
 		case ELFDATANONE:
 			printf("none\n");
 			break;
-			case ELFDATA2LSB:
+		case ELFDATA2LSB:
 			printf("2's complement, little endian\n");
 			break;
-			case ELFDATA2MSB:
+		case ELFDATA2MSB:
 			printf("2's complement, big endian\n");
 			break;
-			default:
+		default:
 			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
@@ -124,7 +124,7 @@ void print_version(unsigned char *e_ident)
 		case EV_CURRENT:
 			printf(" (current)\n");
 			break;
-			default:
+		default:
 			printf("\n");
 			break;
 	}
@@ -143,34 +143,34 @@ void print_osabi(unsigned char *e_ident)
 		case ELFOSABI_NONE:
 			printf("UNIX - System V\n");
 			break;
-			case ELFOSABI_HPUX:
+		case ELFOSABI_HPUX:
 			printf("UNIX - HP-UX\n");
 			break;
-			case ELFOSABI_NETBSD:
+		case ELFOSABI_NETBSD:
 			printf("UNIX - NetBSD\n");
 			break;
-			case ELFOSABI_LINUX:
+		case ELFOSABI_LINUX:
 			printf("UNIX - Linux\n");
 			break;
-			case ELFOSABI_SOLARIS:
+		case ELFOSABI_SOLARIS:
 			printf("UNIX - Solaris\n");
 			break;
-			case ELFOSABI_IRIX:
+		case ELFOSABI_IRIX:
 			printf("UNIX - IRIX\n");
 			break;
-			case ELFOSABI_FREEBSD:
+		case ELFOSABI_FREEBSD:
 			printf("UNIX - FreeBSD\n");
 			break;
-			case ELFOSABI_TRU64:
+		case ELFOSABI_TRU64:
 			printf("UNIX - TRU64\n");
 			break;
-			case ELFOSABI_ARM:
+		case ELFOSABI_ARM:
 			printf("ARM\n");
 			break;
-			case ELFOSABI_STANDALONE:
+		case ELFOSABI_STANDALONE:
 			printf("Standalone App\n");
 			break;
-			default:
+		default:
 			printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
 }
@@ -202,19 +202,19 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 		case ET_NONE:
 			printf("NONE (None)\n");
 			break;
-			case ET_REL:
+		case ET_REL:
 			printf("REL (Relocatable file)\n");
 			break;
-			case ET_EXEC:
+		case ET_EXEC:
 			printf("EXEC (Executable file)\n");
 			break;
-			case ET_DYN:
+		case ET_DYN:
 			printf("DYN (Shared object file)\n");
 			break;
-			case ET_CORE:
+		case ET_CORE:
 			printf("CORE (Core file)\n");
 			break;
-			default:
+		default:
 			printf("<unknown: %x>\n", e_type);
 	}
 }
@@ -250,7 +250,7 @@ void close_elf(int elf)
 {
 	if (close(elf) == -1)
 	{
-		printf(STDERR_FILENO,
+		dprintf(STDERR_FILENO,
 				"Error: Can't close fd %d\n", elf);
 		exit(98);
 	}
